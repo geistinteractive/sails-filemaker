@@ -1,0 +1,42 @@
+{
+  "name": "waterline-filemaker",
+  "version": "0.10.0",
+  "description": "filemaker adapter for Sails / Waterline",
+  "main": "adapter.js",
+  "scripts": {
+    "test": "node test/integration/runner -R spec -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/balderdashy/waterline-%s.git"
+  },
+  "keywords": [
+    "filemaker",
+    "adapter",
+    "sails",
+    "waterline",
+    "sails.js",
+    "plugin"
+  ],
+  "author": "balderdashy",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "async": "^1.2.1",
+    "fms-js": "^0.2.6",
+    "lodash": "^3.9.3"
+  },
+  "devDependencies": {
+    "waterline-adapter-tests": "~0.10.0",
+    "mocha": "*",
+    "captains-log": "~0.11.0"
+  },
+  "waterlineAdapter": {
+    "type": "filemaker",
+    "interfaces": [
+      "semantic",
+      "queryable"
+    ],
+    "waterlineVersion": "~0.10.0"
+  }
+}
