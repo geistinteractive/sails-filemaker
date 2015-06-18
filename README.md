@@ -1,6 +1,6 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-# waterline-filemaker
+# sails-filemaker
 
 Provides easy access to `filemaker` from Sails.js & Waterline.
 
@@ -14,7 +14,7 @@ Strict adherence to an adapter specification enables the (re)use of built-in gen
 To install this adapter, run:
 
 ```sh
-$ npm install waterline-filemaker
+$ npm install sails-filemaker
 ```
 
 
@@ -27,46 +27,35 @@ This adapter exposes the following methods:
 ###### `find()`
 
 + **Status**
-  + Planned
+  + implemented
 
 ###### `create()`
 
 + **Status**
-  + Planned
+  + implemented
 
 ###### `update()`
 
 + **Status**
-  + Planned
+  + planned
 
 ###### `destroy()`
 
 + **Status**
-  + Planned
+  + implemented
 
 
 
 ### Interfaces
 
->TODO:
->Specify the interfaces this adapter will support.
->e.g. `This adapter implements the [semantic]() and [queryable]() interfaces.`
-> For more information, check out this repository's [FAQ](./FAQ.md) and the [adapter interface reference](https://github.com/balderdashy/sails-docs/blob/master/adapter-specification.md) in the Sails docs.
+
+This adapter implements the [semantic]() and [queryable]() interfaces.
+For more information, check out this repository's [FAQ](./FAQ.md) and the [adapter interface reference](https://github.com/balderdashy/sails-docs/blob/master/adapter-specification.md) in the Sails docs.
 
 
 ### Development
 
 Check out **Connections** in the Sails docs, or see the `config/connections.js` file in a new Sails project for information on setting up adapters.
-
-## Getting started
-It's usually pretty easy to add your own adapters for integrating with proprietary systems or existing open APIs.  For most things, it's as easy as `require('some-module')` and mapping the appropriate methods to match waterline semantics.  To get started:
-
-1. Fork this repository
-2. Set up your `README.md` and `package.json` file.  Sails.js adapter module names are of the form sails-*, where * is the name of the datastore or service you're integrating with.
-3. Build your adapter.
-
-
-
 
 ### Running the tests
 
@@ -132,12 +121,9 @@ See [`FAQ.md`](./FAQ.md).
 ### License
 
 **[MIT](./LICENSE)**
-&copy; 2014 [balderdashy](http://github.com/balderdashy) & [contributors]
-[Mike McNeil](http://michaelmcneil.com), [Balderdash](http://balderdash.co) & contributors
+&copy; 2015 [toddgeist](http://github.com/toddgeist) & [contributors]
+[Todd Geist](http://twitter.com/toddgeist), [geist interactive](http://www.geistinteractive.com) & contributors
 
 [Sails](http://sailsjs.org) is free and open-source under the [MIT License](http://sails.mit-license.org/).
-
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/8acf2fc2ca0aca8a3018e355ad776ed7 "githalytics.com")](http://githalytics.com/balderdashy/waterline-filemaker/README.md)
 
 
