@@ -67,9 +67,9 @@ new TestRunner({
     // Default adapter config to use.
     config: {
         schema: false,
-        host : '104.238.140.137',
-        database : 'ContactsTest',
-        layout : 'apiUsers'
+        host : '<localhost>',
+        database : 'Database',
+        layout : 'layout'
     },
 
     // The set of adapter interfaces to test against.
