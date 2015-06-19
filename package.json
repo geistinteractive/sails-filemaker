@@ -34,8 +34,7 @@
   "waterlineAdapter": {
     "type": "filemaker",
     "interfaces": [
-      "semantic",
-      "queryable"
+      "semantic"
     ],
     "waterlineVersion": "~0.10.0"
   }
