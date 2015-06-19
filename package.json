@@ -2,7 +2,7 @@
   "name": "sails-filemaker",
   "version": "0.1.0",
   "description": "filemaker adapter for Sails / Waterline",
-  "main": "adapter.js",
+  "main": "FileMakerAdapter.js",
   "scripts": {
     "test": "node test/integration/runner -R spec -b"
   },
