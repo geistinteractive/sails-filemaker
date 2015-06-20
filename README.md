@@ -78,7 +78,7 @@ For example
 ```json
 tableName : 'webContacts'
 ```
-Would tell the model to connect to a layout named "webContacts", regardless of it's file name. 
+Would tell the model to connect to a layout named "webContacts", regardless of it's file name.
 
 This is useful for FileMaker, since it is a common practice to use naming conventions to denote layouts that are only used for web access.
 
@@ -92,7 +92,7 @@ You will need to load the ContactsTest.fmp12 file on to your FileMaker Server. T
 
 If your Server is not on localhost you will need to change the config in `test/integration/runner.js`
 
-```json
+```javascript
   // Default adapter config to use.
   config: {
     schema: false,
@@ -100,7 +100,7 @@ If your Server is not on localhost you will need to change the config in `test/i
     database: 'ContactsTest',
     userName: 'admin',
     password: ''
-  },
+  }
   ```
 
 
