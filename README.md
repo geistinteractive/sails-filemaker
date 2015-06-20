@@ -88,7 +88,23 @@ Check out **Connections** in the Sails docs, or see the `config/connections.js` 
 
 ### Running the tests
 
-In your adapter's directory, run:
+You will need to load the ContactsTest.fmp12 file on to your FileMaker Server. There is a copy of this file in `test/fixtures/ContactsTest.fmp12`
+
+If your Server is not on localhost you will need to change the config in `test/integration/runner.js`
+
+```json
+  // Default adapter config to use.
+  config: {
+    schema: false,
+    host: '<localhost>', // change to your server
+    database: 'ContactsTest',
+    userName: 'admin',
+    password: ''
+  },
+  ```
+
+
+Then in your adapter's directory, run:
 
 ```sh
 $ npm test
