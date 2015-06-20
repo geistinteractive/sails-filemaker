@@ -6,10 +6,10 @@
 The latest stable version in npm is always a safe bet.
 
 ```sh
-$ npm install waterline-filemaker
+$ npm install sails-filemaker
 ```
 
-[![NPM](https://nodei.co/npm/waterline-filemaker.png?downloads=true&stars=true)](https://nodei.co/npm/waterline-filemaker/)
+[![NPM](https://nodei.co/npm/sails-filemaker.png?downloads=true&stars=true)](https://nodei.co/npm/sails-filemaker/)
 
 
 
@@ -21,7 +21,7 @@ $ npm install waterline-filemaker
 
 ### What is an adapter?
 
- Adapters expose **interfaces**, which imply a conract to implemnt certain functionality.  This allows us to guarantee conventional usage patterns across multiple models, developers, apps, and even companies, making app code more maintainable, efficient, and reliable.  Adapters are useful for integrating with databases, open APIs, internal/proprietary web services, or even hardware.
+Adapters expose **interfaces**, which imply a conract to implemnt certain functionality. This allows us to guarantee conventional usage patterns across multiple models, developers, apps, and even companies, making app code more maintainable, efficient, and reliable.  Adapters are useful for integrating with databases, open APIs, internal/proprietary web services, or even hardware.
 
 
 ### What kind of things can I do in an adapter?

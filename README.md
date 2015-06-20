@@ -45,7 +45,7 @@ This adapter exposes the following methods:
 This adapter implements the [semantic]() interfaces.
 For more information, check out this repository's [FAQ](./FAQ.md) and the [adapter interface reference](https://github.com/balderdashy/sails-docs/blob/master/adapter-specification.md) in the Sails docs.
 
-###FileMaker Specific Usage
+### FileMaker Specific Usage
 
 In `config/connections.js` create an entry for your FileMaker Server and Database, like any other adapter
 
@@ -69,7 +69,7 @@ You can create more then one connection to the same server. Perhaps you need to 
 }
 ```
 
-FileMaker's Custom Web Publishing uses Layouts to access the underlying tables. So Sails models for filemaker connect to Layouts not Tables. Layouts are sort of like viewsm in that they specify a table, and a set of fields. They can even specify a set of related records and fields.  But they do not specify queries.
+FileMaker's Custom Web Publishing uses Layouts to access the underlying tables. So Sails models for filemaker connect to Layouts not Tables. Layouts are sort of like views in that they specify a table, and a set of fields. They can even specify a set of related records and fields.  But they do not specify queries.
 
 This adapter follows the Sails convention of using the file name to derive the layout name. So a User.js model file will connect to a User layout in FileMaker.  If you want to use a different name for your layout, you can set the "tableName" property on the model.
 
