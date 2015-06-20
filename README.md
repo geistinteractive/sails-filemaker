@@ -58,8 +58,6 @@ In `config/connections.js` create an entry for your FileMaker Server and Databas
 }
 ```
 
-Each of these settings can be overridden at the individual model level.
-
 You can create more then one connection to the same server. Perhaps you need to connect to a second Database...
 
 ```javascript
@@ -71,13 +69,20 @@ You can create more then one connection to the same server. Perhaps you need to 
 }
 ```
 
-FileMaker's Custom Web Publishing uses Layouts to access the underlying tables. You will need set layout name in your Models config object.
+FileMaker's Custom Web Publishing uses Layouts to access the underlying tables. So Sails models for filemaker connect to Layouts not Tables. Layouts are sort of like viewsm in that they specify a table, and a set of fields. They can even specify a set of related records and fields.  But they do not specify queries.
+
+This adapter follows the Sails convention of using the file name to derive the layout name. So a User.js model file will connect to a User layout in FileMaker.  If you want to use a different name for your layout, you can set the "tableName" property on the model.
+
+For example
 
 ```json
-config:{
-  layout: "UserLayout"
-}
+tableName : 'webContacts'
 ```
+Would tell the model to connect to a layout named "webContacts", regardless of it's file name. 
+
+This is useful for FileMaker, since it is a common practice to use naming conventions to denote layouts that are only used for web access.
+
+
 
 Check out **Connections** in the Sails docs, or see the `config/connections.js` file in a new Sails project for information on setting up adapters.
 
