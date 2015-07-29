@@ -6,6 +6,14 @@ Provides easy access to [FileMaker](http://www.filemaker.com) Databases hosted o
 
 FileMaker is a different sort of database then typically used with Sails.js. This adapter is connects through FileMaker Server's Custom Web Publishing interface. [see guide](https://fmhelp.filemaker.com/docs/14/en/fms14_cwp_guide.pdf).
 
+**NOTE TO FILEMAKER USERS:** You really need to have at least some experience installing and running [nodejs](https://nodejs.org/) based projects.  If you don't have nodejs and [sailsjs](http://www.sailsjs.org) installed, start there. You won't be able to get far without being able to get those installed and running.
+
+###Video###
+You can watch [this short video](http://vimeo.com/134790850) on how to get setup and running with sails-filemaker. The example below was creating during the screencast.
+
+###Example###
+Take a look at this [repo](https://github.com/geistinteractive/sails-filemaker-example) to see an example that connects to a FileMaker database running on localhost.
+
 ### Installation
 
 To install this adapter, run:
@@ -45,12 +53,13 @@ This adapter exposes the following methods:
 This adapter implements the [semantic]() interfaces.
 For more information, check out this repository's [FAQ](./FAQ.md) and the [adapter interface reference](https://github.com/balderdashy/sails-docs/blob/master/adapter-specification.md) in the Sails docs.
 
-### FileMaker Specific Usage
+### FileMaker Specific Configurations
 
 In `config/connections.js` create an entry for your FileMaker Server and Database, like any other adapter
 
 ```javascript
 'MyFMDataBase' : {
+  adapter: 'sails-filemaker',
   host: '<your server address>',
   database : 'DatabaseName',
   userName: '<userName>',
@@ -62,6 +71,7 @@ You can create more then one connection to the same server. Perhaps you need to 
 
 ```javascript
 'MyOtherFMDataBase' : {
+  adapter: 'sails-filemaker',
   host: '<your server address>',
   database : 'AnotherDatabaseName',
   userName: '<userName>',
@@ -70,6 +80,31 @@ You can create more then one connection to the same server. Perhaps you need to 
 ```
 
 FileMaker's Custom Web Publishing uses Layouts to access the underlying tables. So Sails models for filemaker connect to Layouts not Tables. Layouts are sort of like views in that they specify a table, and a set of fields. They can even specify a set of related records and fields.  But they do not specify queries.
+
+####Models####
+
+In your model, you will want to set a few attributes.
+
+```javascript
+module.exports = {
+  // filemaker handles these
+  autoPK : false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
+  // layout name
+  tableName : 'Contacts',
+  // you MUST set up the primaryKey!
+  // Setting up other attributes/fields is not required
+  // unless you want conversion between JS and FileMaker ( i.e. date fields )
+  attributes: {
+    id : {
+      type : 'string',
+      primaryKey : true,
+      unique : true
+    }
+  }
+};
+```
 
 This adapter follows the Sails convention of using the file name to derive the layout name. So a User.js model file will connect to a User layout in FileMaker.  If you want to use a different name for your layout, you can set the "tableName" property on the model.
 
@@ -83,10 +118,12 @@ Would tell the model to connect to a layout named "webContacts", regardless of i
 This is useful for FileMaker, since it is a common practice to use naming conventions to denote layouts that are only used for web access.
 
 
-
 Check out **Connections** in the Sails docs, or see the `config/connections.js` file in a new Sails project for information on setting up adapters.
 
+
+
 ### Running the tests
+**NOTE:** you only need to run the tests if you are contributing to this project. You do not need to run the tests if you just want to use this in your sails-project.
 
 You will need to load the ContactsTest.fmp12 file on to your FileMaker Server. There is a copy of this file in `test/fixtures/ContactsTest.fmp12`
 
@@ -95,14 +132,13 @@ If your Server is not on localhost you will need to change the config in `test/i
 ```javascript
   // Default adapter config to use.
   config: {
-    schema: false,
+    adapter: 'sails-filemaker',
     host: '<localhost>', // change to your server
     database: 'ContactsTest',
     userName: 'admin',
     password: ''
   }
   ```
-
 
 Then in your adapter's directory, run:
 
