@@ -8,10 +8,10 @@ FileMaker is a different sort of database then typically used with Sails.js. Thi
 
 **NOTE TO FILEMAKER USERS:** You really need to have at least some experience installing and running [nodejs](https://nodejs.org/) based projects.  If you don't have nodejs and [sailsjs](http://www.sailsjs.org) installed, start there. You won't be able to get far without being able to get those installed and running.
 
-###Video###
+### Video
 You can watch [this short video](http://vimeo.com/134790850) on how to get setup and running with sails-filemaker. The example below was creating during the screencast.
 
-###Example###
+### Example
 Take a look at this [repo](https://github.com/geistinteractive/sails-filemaker-example) to see an example that connects to a FileMaker database running on localhost.
 
 ### Installation
@@ -81,7 +81,7 @@ You can create more then one connection to the same server. Perhaps you need to 
 
 FileMaker's Custom Web Publishing uses Layouts to access the underlying tables. So Sails models for filemaker connect to Layouts not Tables. Layouts are sort of like views in that they specify a table, and a set of fields. They can even specify a set of related records and fields.  But they do not specify queries.
 
-####Models####
+#### Models
 
 In your model, you will want to set a few attributes.
 
