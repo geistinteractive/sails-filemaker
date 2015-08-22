@@ -1,6 +1,6 @@
 {
   "name": "sails-filemaker",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "escription": "filemaker adapter for Sails / Waterline",
   "main": "FileMakerAdapter.js",
   "scripts": {
