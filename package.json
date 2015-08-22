@@ -1,7 +1,7 @@
 {
   "name": "sails-filemaker",
   "version": "0.2.3",
-  "description": "filemaker adapter for Sails / Waterline",
+  "escription": "filemaker adapter for Sails / Waterline",
   "main": "FileMakerAdapter.js",
   "scripts": {
     "test": "node test/integration/runner -R spec -b"
@@ -23,7 +23,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "async": "^1.2.1",
-    "fms-js": "^0.2.6",
+    "fms-js": "^0.2.7",
     "lodash": "^3.9.3"
   },
   "devDependencies": {
