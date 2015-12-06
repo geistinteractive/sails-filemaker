@@ -1,8 +1,6 @@
-![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
-
 # sails-filemaker
 
-Provides easy access to [FileMaker](http://www.filemaker.com) Databases hosted on a FileMaker Server from Sails.js & Waterline.
+Provides easy access to [FileMaker](http://www.filemaker.com) Databases hosted on a FileMaker Server from [Sails.js](http://sailsjs.org/) & [Waterline](https://github.com/balderdashy/waterline). It can also be used with [hapi.js](http://hapijs.com/) through [dogwater](https://github.com/devinivy/dogwater), the hapi plugin for Waterline
 
 FileMaker is a different sort of database then typically used with Sails.js. This adapter is connects through FileMaker Server's Custom Web Publishing interface. [see guide](https://fmhelp.filemaker.com/docs/14/en/fms14_cwp_guide.pdf).
 

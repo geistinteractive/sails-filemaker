@@ -16,6 +16,7 @@
     "sails",
     "waterline",
     "sails.js",
+	"hapi",
     "plugin"
   ],
   "author": "toddgeistnp",
